@@ -1,0 +1,12 @@
+
+1. ¿Qué hace st.session_state?
+Es la memoria de la aplicación. En el proyecto del supermercado, se usa para guardar la tabla de compras (table_data) Sin esto, cada vez que agregarías un producto, la página se refrescaría y la tabla se borraría se olvidaría de lo anterior. Gracias a esto, los productos se van acumulando.
+
+2. ¿Qué hace registrar_en_carrito()?
+Es la función que procesa la lógica del negocio. Realiza los cálculos matemáticos: multiplica el precio por la cantidad y le suma el impuesto (ISV) dependiendo de si es 15% o 18%. Luego, toma esos resultados y los añade como una fila nueva al listado de productos en la sesión.
+
+3. ¿Por qué se usa st.form()?
+Se usa para agrupar los campos de entrada (nombre, precio, cantidad). Esto permite que el usuario llene toda la información tranquilamente y que la aplicación solo procese los datos cuando se presiona el botón "Añadir al Carrito". Sin el formulario, la app intentaría recargarse con cada letra que escribas.
+
+4. ¿Qué se muestra con st.dataframe()?
+Es el componente visual que dibuja la tabla en la pantalla. Toma los datos que tenemos guardados en el DataFrame de Pandas y los muestra de forma ordenada para que el usuario pueda ver su lista de artículos, los precios y los subtotales en tiempo real.
